@@ -13,3 +13,14 @@ class Coin:
     def __init__(self):
         # Start the coin on Heads
         self.__sideup = "Heads"
+    def toss(self):
+        # Generate either 0 or 1
+        number = random.randint(0, 1)
+
+        if number == 0:
+            self.__sideup = "Heads"
+        else:
+            self.__sideup = "Tails"
+
+    def get_sideup(self):
+        return self.__sideup
